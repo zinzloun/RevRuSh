@@ -36,7 +36,7 @@ Pass the certificate password and the port. The server will listen to all the av
 #### Run the client
 Pass the server:port as argument.
 ```
-./redlizard_client.exe 192.168.1.10:4443
+redlizard_client.exe 192.168.1.10:4443
 ```
 
 ##### Hardcoded configuration on the client
