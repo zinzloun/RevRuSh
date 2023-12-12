@@ -41,7 +41,7 @@ redlizard_client.exe 192.168.1.10:4443
 
 ##### Hardcoded configuration on the client
 If you cannot pass the server:port parameter to the client consider to change the following in client main file (around line 23):
-```
+```rust
  "127.0.0.1:4443".to_owned()
 ```
 
