@@ -20,7 +20,7 @@ Many thanx to [trickster0](https://github.com/trickster0)
 
 
 #### Requirements:
-- rustc & cargo 1.73.0
+- rustc & cargo >= 1.73.0
 - on linux: OpenSSL 3.0.11 with libssl-dev installed
 - pfx file must reside on src folder of the server
 #### Advises
