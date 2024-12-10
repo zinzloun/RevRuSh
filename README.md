@@ -59,5 +59,5 @@ If you cannot pass the server:port parameter to the client consider to change th
  "127.0.0.1:4443".to_owned()
 ```
 #### Known issues
-Don't send empty command to the client, just hitting return, since the server will loose the shell, not the connection. The reuslt will be a hanging session.
+Don't send empty command to the client, just hitting carriage return, since the server will loose the shell, not the connection. The reuslt will be a hanging session.
 
