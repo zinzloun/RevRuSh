@@ -5,4 +5,4 @@ edition = "2021"
 
 
 [dependencies]
-native-tls = "*"
+native-tls = "0.2"
