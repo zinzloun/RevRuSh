@@ -11,17 +11,34 @@ fn handle_client(mut stream: TlsStream<TcpStream>) {
     println!("[+] Got a connection."); 
     loop {
         print!("~$: ");
-        io::stdout().flush().expect("failed to get it");
-        let mut input = String::new();
-        let _ = io::stdin().read_line(&mut input);
+        io::stdout().flush().expect("failed to flush stdout");
         
-        stream.write(&mut input.as_bytes()).unwrap();
-        let mut data = [0 as u8; 10024];
-        let _ = stream.read(&mut data);
-        let string = String::from_utf8_lossy(&data);
-        println!("{}", string); 
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).expect("failed to read line");
+        
+        // Verifica se l'input non è vuoto dopo il trim
+        if input.trim().is_empty() {
+            println!("Command cannot be empty. Please try again.");
+            continue; // Torna all'inizio del loop
+        }
+
+    
+        stream.write(input.as_bytes()).expect("failed to write to stream");
+        
+      
+        let mut data = [0u8; 10024];
+        let bytes_read = stream.read(&mut data).expect("failed to read from stream");
+        
+        if bytes_read > 0 {
+            let response = String::from_utf8_lossy(&data[..bytes_read]);
+            println!("{}", response);
+        } else {
+            println!("Connection closed by peer.");
+            break;
+        }
     }
 }
+
 
 
 fn main() {
