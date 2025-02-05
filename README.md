@@ -4,9 +4,7 @@ Based on https://github.com/trickster0/RedLizard
 ![Redlizard](screen.png)
 
 ### Note
-Since the original project, RedLizard, is not mantained anymore I decided to create a new indipendent project.
-
-Many thanx to [trickster0](https://github.com/trickster0) 
+Based on [RedLizard](https://github.com/trickster0/RedLizard), since the author does not mantained it anymore, I decided to create a new indipendent repository.
 
 ### Changes from the original project:
 - Use native_tls instead of openssl, since openssl on windows it's a pain
