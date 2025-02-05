@@ -1,10 +1,10 @@
 # RevRuSh - A sample reverse shell in Rust
-Based on https://github.com/trickster0/RedLizard
+Based on [RedLizard](https://github.com/trickster0/RedLizard)
 
 ![Redlizard](screen.png)
 
 ### Note
-Based on [RedLizard](https://github.com/trickster0/RedLizard), since the author does not mantained it anymore, I decided to create a new indipendent repository.
+Since the author does not mantained the original reoository anymore: https://github.com/trickster0/RedLizard/pull/1, I decided to create a new indipendent repository.
 
 ### Changes from the original project:
 - Use native_tls instead of openssl, since openssl on windows it's a pain
